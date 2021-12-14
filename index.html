@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Глейси</title>
@@ -9,66 +9,94 @@
     <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body>
-    <header>
-        <nav>
-            <a>
+
+<body class="page-body">
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a class="main-header-logo">
                 <img src="img/logo/index-logo.svg" width="154" height="64" alt="Логотип Глейси">
             </a>
-            <ul>
+            <ul class="site-navigation">
                 <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О компании</a></li>
             </ul>
             <ul>
                 <li><a href="#"><img src="img/icon/icon-search.svg" width="16" height="16" alt="Кнопка поиска"></a></li>
-                <li><a href="#"><img src="img/icon/icon-authorization.svg" width="20" height="19" alt="Кнопка авторизации">Вход</a></li>
+                <li><a class="login-link" href="#"><img src="img/icon/icon-authorization.svg" width="20" height="19" alt="Кнопка авторизации">Вход</a></li>
                 <li><a href="#"><img src="img/icon/icon-cart.svg" width="21" height="20" alt="Кнопка корзины">Корзина</a></li>
             </ul>
+
+            <section class="modal modal-login" hidden>
+                <form class="login-form" action="/" method="post">
+                    <p>
+                        <input class="login-icon-user" id="login-login" type="text" name="login" placeholder="email@example.com">
+                    </p>
+                    <p>
+                        <input class="login-icon-password" id="login-password" type="text" name="password" placeholder="......">
+                    </p>
+                    <p>
+                        <button class="button" type="submit">Войти</button>
+                    </p>
+                    <ul>
+                        <li><a href="#">Забыли пароль?</a></li>
+                        <li><a href="#">Новая регистрация</a></li>
+                    </ul>
+                </form>
+            </section>
+
+            <section class="modal modal-search" hidden>
+                <form class="search-form" action="/" method="post">
+                    <p>
+                        <input class="search-item" id="search-text" type="text" name="text" placeholder="Крем-брюле">
+                    </p>
+            </section>
         </nav>
         <div>
             <p>с 10 до 20, ежедневно</p>
-            <p><a href="tel:+78124502525">8 812 450-25-25</a></p>
+            <p class="contacts-phone"><a href="tel:+78124502525">8 812 450-25-25</a></p>
         </div>
     </header>
 
-    <main>
+    <main class="container">
         <h1>Главная страница</h1>
-        <section>
+        <section class="slider">
             <!--Фон-->
-            <figure>
+            <figure class="slider-content">
                 <img src="img/slider-ice-cream-1.png" width="716" height="576" alt="Крем-брюле и пломбир с малиновым джемом">
                 <img src="img/slider-ice-cream-2.png" width="716" height="576" alt="Шоколадный пломбир и лимонный сорбет" hidden>
                 <img src="img/slider-ice-cream-3.png" width="716" height="576" alt="Пломбир с помадкой и клубничный щербет" hidden>
             </figure>
-            <a href="#">Давайте оба</a>
+            <a class="button slider-button" href="#">Давайте оба</a>
             <!--Листалка-->
             <button type="button" disabled>1</button>
             <button type="button">2</button>
             <button type="button">3</button>
         </section>
-        <section>
+
+        <section class="gift">
             <h2>Даром</h2>
-            <div>
+            <div class="gift-raspberry">
                 <img src="img/background/background-raspberry.jpg" width="560" height="229" alt="Малиновый фон">
                 <h3>Малина даром!</h3>
                 <p>
                     При покупке 2 кг любого фруктового мороженого, добавим<br>
                     в ваш заказ банку малинового варенья бесплатно.
                 </p>
-                <a href="#">Хочу варенье!</a>
+                <a class="button" href="#">Хочу варенье!</a>
             </div>
-            <div>
+            <div class="gift-chocolate">
                 <img src="img/background/background-chocolate.jpg" width="560" height="229" alt="Шоколадный фон">
                 <h3>Шоколадки даром!</h3>
                 <p>
                     При покупке 2 кг пломбира, добавим в ваш заказ упаковку<br>
                     вкуснейшей шоколадной присыпки совершенно бесплатно.
                 </p>
-                <a href="#">Хочу шоколадки!</a>
+                <a class="button" href="#">Хочу шоколадки!</a>
             </div>
         </section>
-        <section>
+
+        <section class="product hit">
             <h2>Хиты</h2>
             <ul>
                 <li>
@@ -109,7 +137,8 @@
                 </li>
             </ul>
         </section>
-        <section>
+
+        <section class="info">
             <h2>О магазине</h2>
             <img src="img/background/background-waffle.png" width="1146" height="306" alt="Вафельный фон">
             <p>
@@ -152,7 +181,8 @@
                 </li>
             </ul>
         </section>
-        <section>
+
+        <section class="news">
             <h2>Новости</h2>
             <img src="img/background/background-strawberry.jpg" width="560" height="220" alt="Фон фруктовый щербет">
             <h3>Новое в нашем блоге</h3>
@@ -164,7 +194,8 @@
                 </p>
             </a>
         </section>
-        <section>
+
+        <section class="subscription">
             <h2>Подписка</h2>
             <img src="img/background/background-post.png" width="560" height="220" alt="Почтовый фон">
             <p>
@@ -174,10 +205,11 @@
             </p>
             <form id="asd_subscribe_form" action="/" method="post">
                 <input type="text" name="asd_email" placeholder="email@example.com">
-                <input type="submit" value="Отправить" id="asd_subscribe_submit" name="asd_submit">
+                <input class="button" type="submit" value="Отправить" id="asd_subscribe_submit" name="asd_submit">
             </form>
         </section>
-        <section>
+
+        <section class="contacts">
             <h2>Контакты</h2>
             <!--ЗДЕСЬ ДОЛЖНА БЫТЬ карта-->
             <img src="img/location.png" width="1200" height="430" alt="Карта GllacyShop">
@@ -191,24 +223,44 @@
             </a>
             <p>
                 Для заказов по телефону:<br>
-                <a href="tel:+78124502525">8 812 450-25-25</a><br>
+                <a class="contacts-phone" href="tel:+78124502525">8 812 450-25-25</a><br>
                 (с 10 до 20 ежедневно)
             </p>
-            <a href="#">Форма обратной связи</a>
+            <a class="button" href="#">Форма обратной связи</a>
         </section>
     </main>
+    
+    <section class="modal modal-feedback" hidden>
+        <h2>Мы обязательно вам ответим!</h2>
+        <form class="feedback-form" action="/" method="post">
+            <p class="feedback-item">
+                <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p class="feedback-item">
+                <input id="feedback-mail" type="text" name="mail" placeholder="email@example.com">
+            </p>
+            <p class="feedback-item">
+                <input id="feedback-text" type="text" name="text" placeholder="В свободной форме">
+            </p>
+            <p class="button">
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+        <button class="modal-close" type="button"><img src="/img/icon/close-button-big.svg" alt="Кнопка Close"></button>
+    </section>
 
-    <footer>
-        <section>
+    <footer class="main-footer">
+        <section class="footer-social">
             <h2>Соцсети</h2>
             <ul>
-                <li><a href="#"><img src="img/icon/icon-facebook.svg" width="32" height="32" alt="Иконка facebook"></a></li>
-                <li><a href="#"><img src="img/icon/icon-vkontakte.svg" width="32" height="32" alt="Иконка vkontakte"></a></li>
-                <li><a href="#"><img src="img/icon/icon-instagram.svg" width="32" height="32" alt="Иконка instagram"></a></li>
-                <li><a href="#"><img src="img/icon/icon-twitter.svg" width="32" height="32" alt="Иконка twitter"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-facebook.svg" width="32" height="32" alt="Иконка facebook"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-vkontakte.svg" width="32" height="32" alt="Иконка vkontakte"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-instagram.svg" width="32" height="32" alt="Иконка instagram"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-twitter.svg" width="32" height="32" alt="Иконка twitter"></a></li>
             </ul>
         </section>
-        <section>
+        
+        <section class="footer-info">
             <h2>Информация</h2>
             <ul>
                 <li><a href="#"><img src="img/icon/icon-heart.svg" width="15" height="13" alt="">Для поставщиков</a></li>
@@ -217,12 +269,12 @@
                 <li><a href="#">Экологические стандарты</a></li>
             </ul>
         </section>
-        <div>
+        <p class="footer-copyright">
             <a href="https://htmlacademy.ru/">
                 <img src="img/logo/html-academy-logo.svg" width="108" height="39" alt="Логотип HTML Academy">
                 <p>Сделано в HTML Academy © 2019</p>
             </a>
-        </div>
+        </p>
     </footer>
     
 </body>
