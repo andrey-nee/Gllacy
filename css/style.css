@@ -1,0 +1,52 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/roboto.woff2") format("woff2"),
+        url("/fonts/roboto.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/robotomedium.woff2") format("woff2"),
+        url("/fonts/robotomedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/robotobold.woff2") format("woff2"),
+        url("/fonts/robotobold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --basic-white: #FFFFFF;
+    --basic-black: #323232;
+    --basic-olive: #849D8F;
+    --basic-grey: #8996A6;
+    --basic-light-brown: #9D8B84;
+}
+
+/* GLobal */
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color: var(--basic-white);
+    
+    /* ВРЕМЕННАЯ ЗАЛИВКА */
+    background-color: var(--basic-olive);
+}
+
+a {
+    text-decoration: none;
+}

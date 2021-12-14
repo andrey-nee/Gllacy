@@ -1,46 +1,78 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Глейси. Каталог</title>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon-152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body>
-    <header>
-        <nav>
-            <a>
+
+<body class="page-body">
+
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a class="main-header-logo">
                 <img src="img/logo/index-logo.svg" width="154" height="64" alt="Логотип Глейси">
             </a>
-            <ul>
+            <ul class="site-navigation">
                 <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О компании</a></li>
             </ul>
             <ul>
-                <li><a href="#"><img src="img/icon/icon-search.svg" width="16" height="16" alt="Кнопка поиска"></a></li>
-                <li><a href="#"><img src="img/icon/icon-authorization.svg" width="20" height="19" alt="Кнопка авторизации">Вход</a></li>
-                <li><a href="#"><img src="img/icon/icon-cart.svg" width="21" height="20" alt="Кнопка корзины">Корзина</a></li>
+                <li><a class="search-link" href="#"><img src="img/icon/icon-search.svg" width="16" height="16" alt="Кнопка поиска"></a></li>
+                <li><a class="login-link" href="#"><img src="img/icon/icon-authorization.svg" width="20" height="19" alt="Кнопка авторизации">Вход</a></li>
+                <li><a class="cart-link" href="#"><img src="img/icon/icon-cart.svg" width="21" height="20" alt="Кнопка корзины">Корзина</a></li>
             </ul>
+
+            <section class="modal modal-search" hidden>
+                <form class="search-form" action="/" method="post">
+                    <p>
+                        <input class="search-item" id="search-text" type="text" name="text" placeholder="Крем-брюле">
+                    </p>
+            </section>
+
+            <section class="modal modal-login" hidden>
+                <form class="login-form" action="/" method="post">
+                    <p>
+                        <input class="login-icon-user" id="login-login" type="text" name="login" placeholder="email@example.com">
+                    </p>
+                    <p>
+                        <input class="login-icon-password" id="login-password" type="text" name="password" placeholder="......">
+                    </p>
+                    <p>
+                        <button class="button" type="submit">Войти</button>
+                    </p>
+                    <ul>
+                        <li><a href="#">Забыли пароль?</a></li>
+                        <li><a href="#">Новая регистрация</a></li>
+                    </ul>
+                </form>
+            </section>
         </nav>
+
         <div>
             <p>с 10 до 20, ежедневно</p>
             <p><a href="tel:+78124502525">8 812 450-25-25</a></p>
         </div>
     </header>
 
-    <main>
+    <main class="container">
         <!--Хлебные крошки-->
-        <ul>
+        <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Каталог</a></li>
             <li>Сливочное</li>
         </ul>
         <h1>Сливочное мороженое</h1>
-        <section>
+
+        <section class="filter">
             <h2>Фильтр товаров</h2>
             <form method="get" action="/">
                 <fieldset>
@@ -107,7 +139,7 @@
             </form>
         </section>
 
-        <section>
+        <section class="product">
             <h2>Товары</h2>
             <ul>
                 <li>
@@ -117,7 +149,7 @@
                         Сливочное с апельсиновым<br>
                         джемом и цитрусовой стружкой
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-02.png" width="267" height="267" alt="Сливочно-кофейное мороженое с кусочками шоколада"></a>
@@ -126,7 +158,7 @@
                         Сливочно-кофейное с кусочками<br>
                         шоколада
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-03.png" width="267" height="267" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада"></a>
@@ -135,7 +167,7 @@
                         Сливочно-клубничное с<br>
                         присыпкой из белого шоколада
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-04.png" width="267" height="267" alt="Сливочное крем-брюле мороженое с карамельной подливкой"></a>
@@ -144,7 +176,7 @@
                         Сливочное крем-брюле<br>
                         с карамельной подливкой
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-05.png" width="267" height="267" alt="Сливочное мороженое с брусничным джемом"></a>
@@ -153,7 +185,7 @@
                         Сливочное с брусничным<br>
                         джемом
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-06.png" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники"></a>
@@ -162,7 +194,7 @@
                         Сливочно-черничное с цельными<br>
                         ягодами черники
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-07.png" width="267" height="267" alt="Сливочно-лимонное мороженое с карамельной присыпкой"></a>
@@ -171,7 +203,7 @@
                         Сливочно-лимонное с<br>
                         карамельной присыпкой
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-08.png" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой"></a>
@@ -180,7 +212,7 @@
                         Сливочное с шоколадной<br>
                         стружкой
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-09.png" width="267" height="267" alt="Сливочно-ванильное мороженое с кусочками шоколада"></a>
@@ -189,7 +221,7 @@
                         Сливочно-ванильное<br>
                         с кусочками шоколада
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-10.png" width="267" height="267" alt="Сливочноe мороженое с ментоловым сиропом"></a>
@@ -198,7 +230,7 @@
                         Сливочноe с ментоловым<br>
                         сиропом
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-11.png" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада"></a>
@@ -207,7 +239,7 @@
                         Сливочное с кусочками черного<br>
                         шоколада
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
                 <li>
                     <a href="#"><img src="img/catalog/catalog-item-12.png" width="267" height="267" alt="Сливочное мороженое с мятным сиропом"></a>
@@ -215,10 +247,10 @@
                     <p>
                         Сливочное с мятным сиропом
                     </p>
-                    <button type="button" hidden>Быстрый просмотр</button>
+                    <button class="button" type="button" hidden>Быстрый просмотр</button>
                 </li>
             </ul>
-            <ul>
+            <ul class="pagination">
                 <li><a><img src="img/icon/arrow-left-small.svg" width="7" height="12" alt="Стрелка-переход влево"></a></li>
                 <li><a>1</a></li>
                 <li><a href="#">2</a></li>
@@ -230,18 +262,18 @@
         </section>
     </main>
 
-    <footer>
-        <section>
+    <footer class="main-footer">
+        <section class="footer-social">
             <h2>Соцсети</h2>
             <ul>
-                <li><a href="#"><img src="img/icon/icon-facebook.svg" width="32" height="32" alt="Иконка facebook"></a></li>
-                <li><a href="#"><img src="img/icon/icon-vkontakte.svg" width="32" height="32" alt="Иконка vkontakte"></a></li>
-                <li><a href="#"><img src="img/icon/icon-instagram.svg" width="32" height="32" alt="Иконка instagram"></a></li>
-                <li><a href="#"><img src="img/icon/icon-twitter.svg" width="32" height="32" alt="Иконка twitter"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-facebook.svg" width="32" height="32" alt="Иконка facebook"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-vkontakte.svg" width="32" height="32" alt="Иконка vkontakte"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-instagram.svg" width="32" height="32" alt="Иконка instagram"></a></li>
+                <li><a class="social-button" href="#"><img src="img/icon/icon-twitter.svg" width="32" height="32" alt="Иконка twitter"></a></li>
             </ul>
         </section>
         
-        <section>
+        <section class="footer-info">
             <h2>Информация</h2>
             <ul>
                 <li><a href="#"><img src="img/icon/icon-heart.svg" width="15" height="13" alt="">Для поставщиков</a></li>
@@ -250,12 +282,12 @@
                 <li><a href="#">Экологические стандарты</a></li>
             </ul>
         </section>
-        <div>
+        <p class="footer-copyright">
             <a href="https://htmlacademy.ru/">
                 <img src="img/logo/html-academy-logo.svg" width="108" height="39" alt="Логотип HTML Academy">
                 <p>Сделано в HTML Academy © 2019</p>
             </a>
-        </div>
+        </p>
     </footer>
 
 </body>

@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Глейси</title>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon-152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 
 <body class="page-body">
+
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo">
@@ -22,10 +27,17 @@
                 <li><a href="#">О компании</a></li>
             </ul>
             <ul>
-                <li><a href="#"><img src="img/icon/icon-search.svg" width="16" height="16" alt="Кнопка поиска"></a></li>
+                <li><a class="search-link" href="#"><img src="img/icon/icon-search.svg" width="16" height="16" alt="Кнопка поиска"></a></li>
                 <li><a class="login-link" href="#"><img src="img/icon/icon-authorization.svg" width="20" height="19" alt="Кнопка авторизации">Вход</a></li>
-                <li><a href="#"><img src="img/icon/icon-cart.svg" width="21" height="20" alt="Кнопка корзины">Корзина</a></li>
+                <li><a class="cart-link" href="#"><img src="img/icon/icon-cart.svg" width="21" height="20" alt="Кнопка корзины">Корзина</a></li>
             </ul>
+
+            <section class="modal modal-search" hidden>
+                <form class="search-form" action="/" method="post">
+                    <p>
+                        <input class="search-item" id="search-text" type="text" name="text" placeholder="Крем-брюле">
+                    </p>
+            </section>
 
             <section class="modal modal-login" hidden>
                 <form class="login-form" action="/" method="post">
@@ -44,14 +56,8 @@
                     </ul>
                 </form>
             </section>
-
-            <section class="modal modal-search" hidden>
-                <form class="search-form" action="/" method="post">
-                    <p>
-                        <input class="search-item" id="search-text" type="text" name="text" placeholder="Крем-брюле">
-                    </p>
-            </section>
         </nav>
+
         <div>
             <p>с 10 до 20, ежедневно</p>
             <p class="contacts-phone"><a href="tel:+78124502525">8 812 450-25-25</a></p>
@@ -182,32 +188,35 @@
             </ul>
         </section>
 
-        <section class="news">
-            <h2>Новости</h2>
-            <img src="img/background/background-strawberry.jpg" width="560" height="220" alt="Фон фруктовый щербет">
-            <h3>Новое в нашем блоге</h3>
-            <a href="#">
+        <div>
+            <section class="news">
+                <h2>Новости</h2>
+                <img src="img/background/background-strawberry.jpg" width="560" height="220" alt="Фон фруктовый щербет">
+                <h3>Новое в нашем блоге</h3>
+                <a href="#">
+                    <p>
+                        10 способов сервировки<br>
+                        фруктовых щербетов<br>
+                        к столу
+                    </p>
+                </a>
+            </section>
+    
+            <section class="subscription">
+                <h2>Подписка</h2>
+                <img src="img/background/background-post.png" width="560" height="220" alt="Почтовый фон">
                 <p>
-                    10 способов сервировки<br>
-                    фруктовых щербетов<br>
-                    к столу
+                    Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе<br>
+                    всего самого вкусного, что у нас происходит. Обещаем не спамить<br>
+                    и не слать всякой ненужной ерунды. Честно =)
                 </p>
-            </a>
-        </section>
+                <form id="asd_subscribe_form" action="/" method="post">
+                    <input type="text" name="asd_email" placeholder="email@example.com">
+                    <input class="button" type="submit" value="Отправить" id="asd_subscribe_submit" name="asd_submit">
+                </form>
+            </section>
+        </div>
 
-        <section class="subscription">
-            <h2>Подписка</h2>
-            <img src="img/background/background-post.png" width="560" height="220" alt="Почтовый фон">
-            <p>
-                Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе<br>
-                всего самого вкусного, что у нас происходит. Обещаем не спамить<br>
-                и не слать всякой ненужной ерунды. Честно =)
-            </p>
-            <form id="asd_subscribe_form" action="/" method="post">
-                <input type="text" name="asd_email" placeholder="email@example.com">
-                <input class="button" type="submit" value="Отправить" id="asd_subscribe_submit" name="asd_submit">
-            </form>
-        </section>
 
         <section class="contacts">
             <h2>Контакты</h2>
