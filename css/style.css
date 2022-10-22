@@ -1,32 +1,43 @@
-/* Обнуление стилей */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
+/* ----- Fonts ----- */
+@font-face {
+  font-family: "Roboto";
+  src:  url(../fonts/roboto.woff2) format("woff2"),
+        url(../fonts/roboto.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
-a {
-  text-decoration: none;
+
+@font-face {
+  font-family: "Roboto";
+  src:  url(../fonts/robotomedium.woff2) format("woff2"),
+        url(../fonts/robotomedium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
-ul,
-ol,
-li {
-  list-style: none;
+
+@font-face {
+  font-family: "Roboto";
+  src:  url(../fonts/robotobold.woff2) format("woff2"),
+        url(../fonts/robotobold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
-img {
-  vertical-align: top;
+/* ----------------------------- */
+
+/* ----- Variables ----- */
+:root {
+  --basic-green: #849D8F;
+  --basic-grey: #8996A6;
+  --basic-brown: #9D8B84;
+
+  --basic-extra-black: #323232;
+  --basic-black: #5A5A5A;
+  --basic-white: #FFFFFF;
+
+  --basic-red: #E84D37;
 }
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
-} */
+
+/* ----------------------------- */
 html,
 body {
   height: 100%;
@@ -36,13 +47,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-body.page--green {
+body.page-body--green {
   background-color: #849D8F;
 }
-body.page--gray {
+body.page-body--gray {
   background-color: #8996A6;
 }
-body.page--brown {
+body.page-body--brown {
   background-color: #9D8B84;
 }
 /* ----- Прячет заголовки ----- */
@@ -64,11 +75,11 @@ body.page--brown {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 /* ----- Ширина с учётом отступа от края страницы ----- */
 [class*="__container"] {
   max-width: 1146px;
-  margin: 0 auto;
   padding: 0;
   box-sizing: content-box;
 }
@@ -81,3 +92,9 @@ body.page--brown {
   flex: 1 0 auto;
 }
 /* ----------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* ----------------------------- */
+
