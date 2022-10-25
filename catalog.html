@@ -27,8 +27,8 @@
             <nav class="main-header__navigation">
               <div class="main-header__site-navigation site-navigation">
                 <ul class="site-navigation__list">
-                  <li class="site-navigation__item">
-                    <a href="catalog.html" class="site-navigation__link">Каталог</a>
+                  <li class="site-navigation__item site-navigation__item--disabled">
+                    <a href="catalog.html" class="site-navigation__link site-navigation__link--disabled">Каталог</a>
                   </li>
                   <li class="site-navigation__item">
                     <a href="blank.html" class="site-navigation__link">Доставка и оплата</a>
@@ -68,21 +68,21 @@
       <main class="main">
         <h1 class="main__title visually-hidden">Каталог</h1>
 
-        <section class="crumbs">
-          <div class="crumbs__container">
-            <h2 class="crumbs__title title visually-hidden">Хлебные крошки</h2>
-            <ul class="crumbs__list">
-              <li class="crumbs__item">
-                <a href="index.html" class="crumbs__link">Главная</a>
+        <section class="breadcrumbs">
+          <div class="breadcrumbs__container">
+            <h2 class="breadcrumbs__title title visually-hidden">Хлебные крошки</h2>
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
               </li>
-              <li class="crumbs__item">
-                <a href="catalog.html" class="crumbs__link">Каталог</a>
+              <li class="breadcrumbs__item">
+                <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
               </li>
-              <li class="crumbs__item">
-                <a href="blank.html" class="crumbs__link">Сливочное</a>
+              <li class="breadcrumbs__item">
+                <a href="blank.html" class="breadcrumbs__link breadcrumbs__link--disabled">Сливочное</a>
               </li>
             </ul>
-            <h3 class="crumbs__subtitle subtitle">Сливочное мороженое</h3>
+            <h3 class="breadcrumbs__subtitle subtitle">Сливочное мороженое</h3>
           </div>
         </section>
 
@@ -104,24 +104,24 @@
               </fieldset>
               <fieldset class="filter__fat-content">
                 <legend>Жирность:</legend>
-                <ul>
-                  <li><input type="radio" name="fat-content" value="0">0%</li>
-                  <li><input type="radio" name="fat-content" value="0-10" checked>до 10%</li>
-                  <li><input type="radio" name="fat-content" value="0-30">до 30%</li>
-                  <li><input type="radio" name="fat-content" value="30-100">выше 30%</li>
+                <ul class="filter__list fat-content">
+                  <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="0">0%</li>
+                  <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="0-10" checked>до 10%</li>
+                  <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="0-30">до 30%</li>
+                  <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="30-100">выше 30%</li>
                 </ul>
               </fieldset>
-              <fieldset class="filter__fillers">
+              <fieldset class="filter__list fillers">
                 <legend>Наполнители:</legend>
-                <ul>
-                  <li><input type="checkbox" name="fillers" value="chocolate" checked>шоколадные</li>
-                  <li><input type="checkbox" name="fillers" value="sugar-powder" checked>сахарные присыпки</li>
-                  <li><input type="checkbox" name="fillers" value="fruit">фрукты</li>
-                  <li><input type="checkbox" name="fillers" value="syrup">сиропы</li>
-                  <li><input type="checkbox" name="fillers" value="jam">джемы</li>
+                <ul class="filter__list fillers">
+                  <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="chocolate" checked>шоколадные</li>
+                  <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="sugar-powder" checked>сахарные присыпки</li>
+                  <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="fruit">фрукты</li>
+                  <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="syrup">сиропы</li>
+                  <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="jam">джемы</li>
                 </ul>
               </fieldset>
-              <input type="submit" value="Применить">
+              <input type="submit" value="Применить" class="filter__button">
             </form>
           </div>
         </section>
@@ -278,7 +278,7 @@
           </ul>
           <ul class="main-footer__info">
             <li class="main-footer__info-item">
-              <a href="blank.html" class="main-footer__link">Для поставщиков</a>
+              <a href="blank.html" class="main-footer__link main-footer__link--bold">Для поставщиков</a>
             </li>
             <li class="main-footer__info-item">
               <a href="blank.html" class="main-footer__link">Наши документы</a>
@@ -294,7 +294,7 @@
             <a href="htmlacademy.ru" class="main-footer__copyrights-link">
               <img src="img/logo/html-academy-logo.svg" width="108px" height="39px" alt="Логотип HTML Academy">
             </a>
-            <p>Сделано в <a href="htmlacademy.ru">HTML Academy</a> © 2019</p>
+            <p>Сделано в <a href="htmlacademy.ru" class="main-footer__copyrights-link">HTML Academy</a> © 2019</p>
           </div>
         </div>
       </footer>

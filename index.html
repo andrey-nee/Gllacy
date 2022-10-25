@@ -92,7 +92,7 @@
             </div>
             <div class="promo__action">
               <button type="button" class="promo__button--order button">
-                <div class="button__text">Давайте оба!</div>
+                <div class="promo__button-text button__text">Давайте оба!</div>
               </button>
             </div>
             <div class="promo__paginator">
@@ -107,18 +107,28 @@
           <div class="gift__container">
             <h2 class="gift__title title visually-hidden">Даром</h2>
             <div class="gift__raspberry">
-              <h3 class="gift__subtitle subtitle">Малинка даром!</h3>
-              <p class="gift__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <button type="button" class="gift__button button">
-                <div class="button__text">Хочу варенье!</div>
-              </button>
+              <div class="gift__image gift__image--raspberry">
+                <img src="img/gift-raspberry.jpg" width="560px" height="229px" alt="Малиновый фон">
+              </div>
+              <div class="gift__content">
+                <h3 class="gift__subtitle subtitle">Малинка даром!</h3>
+                <p class="gift__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <button type="button" class="gift__button button">
+                  <div class="gift__button-text button__text">Хочу варенье!</div>
+                </button>
+              </div>
             </div>
-            <div class="gift__raspberry">
-              <h3 class="gift__subtitle subtitle">Шоколадки даром!</h3>
-              <p class="gift__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <button type="button" class="gift__button button">
-                <div class="button__text">Хочу шоколадки!</div>
-              </button>
+            <div class="gift__chocolate">
+              <div class="gift__image gift__image--chocolate">
+                <img src="img/gift-chocolate.jpg" width="560px" height="229px" alt="Шоколадный фон">
+              </div>
+              <div class="gift__content">
+                <h3 class="gift__subtitle subtitle">Шоколадки даром!</h3>
+                <p class="gift__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                <button type="button" class="gift__button button">
+                  <div class="gift__button-text button__text">Хочу шоколадки!</div>
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -206,7 +216,7 @@
               <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form method="get" action="#" class="subscribe__form">
                 <input type="email" name="email" placeholder="email@example.com" required>
-                <input type="submit" value="Отправить">
+                <input type="submit" value="Отправить" class="subscribe__form-button">
               </form>
             </div>
           </section>
@@ -221,7 +231,7 @@
             <div class="contacts__form">
               <div class="contacts__address">
                 <p>Адрес главного офиса и офлайн-магазина:</p>
-                <p>ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
+                <span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
               </div>
               <div class="contacts__phone">
                 <p>Для заказов по телефону:</p>
@@ -229,7 +239,7 @@
                 <p>(с 10 до 20 ежедневно)</p>
               </div>
               <button type="button" class="contacts__button button">
-                <div class="button__text">Форма обратной связи</div>
+                <div class="contacts__button-text button__text">Форма обратной связи</div>
               </button>
             </div>
           </div>
@@ -285,7 +295,7 @@
           </ul>
           <ul class="main-footer__info">
             <li class="main-footer__info-item">
-              <a href="blank.html" class="main-footer__link">Для поставщиков</a>
+              <a href="blank.html" class="main-footer__link main-footer__link--bold">Для поставщиков</a>
             </li>
             <li class="main-footer__info-item">
               <a href="blank.html" class="main-footer__link">Наши документы</a>
@@ -298,10 +308,10 @@
             </li>
           </ul>
           <div class="main-footer__copyrights">
-            <a href="htmlacademy.ru" class="main-footer__copyrights-link">
+            <a href="htmlacademy.ru" class="main-footer__copyrights-logo">
               <img src="img/logo/html-academy-logo.svg" width="108px" height="39px" alt="Логотип HTML Academy">
             </a>
-            <p>Сделано в <a href="htmlacademy.ru">HTML Academy</a> © 2019</p>
+            <p>Сделано в <a href="htmlacademy.ru" class="main-footer__copyrights-link">HTML Academy</a> © 2019</p>
           </div>
         </div>
       </footer>
