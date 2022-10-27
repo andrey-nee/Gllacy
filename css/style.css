@@ -123,6 +123,7 @@ img {
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   border-radius: 70px;
   border: 0;
+  color: var(--basic-white);
 }
 /* Remove border and padding in Firefox */
 /* ::-moz-focus-outer,
@@ -180,6 +181,10 @@ img {
   font-size: 60px;
   line-height: 1;
 }
+.promo__button--order {
+  width: 261px;
+  height: 62px;
+}
 .promo__button-text {
   font: inherit;
   font-weight: 700;
@@ -198,6 +203,10 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.22;
+}
+.gift__button {
+  width: 164px;
+  height: 48px;
 }
 .gift__button-text {
   font: inherit;
@@ -295,7 +304,8 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.33;
-  color: var(--basic-white);
+  width: 130px;
+  height: 44px;
 }
 
 /* ----- Contacts ----- */
@@ -322,6 +332,10 @@ img {
   line-height: 1.33;
   text-decoration: none;
   color: inherit;
+}
+.contacts__button {
+  width: 253px;
+  height: 43px;
 }
 .contacts__button-text {
   font-weight: 700;
@@ -399,6 +413,8 @@ a.main-footer__copyrights-link {
   font-size: 16px;
   line-height: 1.12;
   color: inherit;
+  width: 144px;
+  height: 36px;
 }
 .filter__button {
   background: rgba(255, 255, 255, 0.2);
@@ -432,6 +448,15 @@ a.main-footer__copyrights-link {
   font-size: 16px;
   line-height: 1.12;
   color: var(--basic-white);
+  background-color: transparent;
+  border: 0;
+}
+.products__button--active {
+  border-radius: 50%;
+  min-width: 26px;
+  min-height: 26px;
+  background-color: var(--basic-white);
+  color: var(--basic-extra-black);
 }
 
 /* ----- Footer ----- */
