@@ -77,7 +77,7 @@ body {
 }
 
 /* ----- Прячет заголовки ----- */
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -88,7 +88,7 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 /* ----------------------------- */
 .wrapper {
@@ -191,6 +191,16 @@ img {
   font-size: 32px;
   line-height: 1.38;
   color: var(--basic-white);
+}
+.promo__button--paginator {
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  background-color: transparent;
+  min-width: 21px;
+  min-height: 21px;
+}
+.promo__button--active {
+  background-color: var(--basic-white);
 }
 
 /* ----- Gift ----- */
@@ -443,20 +453,22 @@ a.main-footer__copyrights-link {
 .products__image img {
   border-radius: 50%;
 }
-.products__button--paginator {
+.products__button-paginator {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.12;
   color: var(--basic-white);
-  background-color: transparent;
-  border: 0;
+  list-style: none;
 }
-.products__button--active {
-  border-radius: 50%;
-  min-width: 26px;
-  min-height: 26px;
-  background-color: var(--basic-white);
+.products__button-paginator--active {
+}
+.products__button-link {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+.products__button-link--active {
   color: var(--basic-extra-black);
+  text-decoration: none;
 }
 
 /* ----- Footer ----- */
