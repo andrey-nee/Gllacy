@@ -546,8 +546,6 @@ a.main-footer__copyrights-link {
   text-decoration: none;
   list-style: none;
 }
-.products__button-paginator--active {
-}
 .products__button-link {
   color: var(--basic-white);
   text-decoration: none;
