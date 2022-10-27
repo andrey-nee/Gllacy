@@ -33,6 +33,7 @@
   --basic-black: #5A5A5A;
   --basic-white: #FFFFFF;
   --basic-red: #E84D37;
+  --basic-milk: #F8F7F4;;
 
   --nav-current: #D07058;
   --nav-hover: #FBDED7;
@@ -97,13 +98,14 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 27px;
 }
 /* ----- Ширина с учётом отступа от края страницы ----- */
-[class*="__container"] {
-  max-width: 1146px;
+/* [class*="__container"] {
   padding: 0;
   box-sizing: content-box;
-}
+  margin: 0 auto;
+} */
 /* ----- Прижимаем подвал к низу страницы ----- */
 .main {
   flex: 1 0 auto;
@@ -134,6 +136,10 @@ img {
 /* ----------------------------- */
 
 /* ----- Header ----- */
+.main-header__navigation ul {
+  margin: 0;
+  padding: 0;
+}
 .site-navigation__item {
   font-weight: 700;
   font-size: 16px;
@@ -173,9 +179,24 @@ img {
 .main-header__info a {
   text-decoration: none;
   color: inherit;
-  }
+}
+.main-header__main-line {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+.main-header__navigation {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.main-header__user-navigation {
+  justify-self: end;
+}
 
 /* ----- Promo (slider) ----- */
+.promo__image {
+  margin: 0 -27px;
+  display: block;
+}
 .promo__description {
   font-weight: 700;
   font-size: 60px;
@@ -194,6 +215,10 @@ img {
 }
 
 /* ----- Gift ----- */
+.gift__container img {
+  display: block;
+  border-radius: 16px;
+}
 .gift__subtitle {
   font-weight: 700;
   font-size: 35px;
@@ -219,13 +244,18 @@ img {
   max-width: 560px;
   max-height: 229px;
   background-color: rgb(131, 40, 63);
-  background-size: 560px 229px;
+  border-radius: 16px;
 }
 .gift__image--chocolate {
   max-width: 560px;
   max-height: 229px;
   background-color: rgb(109, 54, 22);
-  background-size: 560px 229px;
+  border-radius: 16px;
+}
+.gift__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
 }
 
 /* ----- Hit ----- */
@@ -248,6 +278,12 @@ img {
 }
 .hit__image img {
   border-radius: 50%;
+  display: block;
+}
+.hit__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 26px;
 }
 
 /* ----- About ----- */
@@ -264,12 +300,18 @@ img {
   color: var(--basic-extra-black);
 }
 .about__container {
+  max-width: 1146px;
   background-color: #e4dcc2;
   background-image: url(../img/benefits-pattern.png);
   background-repeat:repeat;
+  border-radius: 16px;
 }
 
-/* ----- News ----- */
+/* ----- News / Subscribe ----- */
+.news__content {
+  max-width: 560px;
+  max-height: 220px;
+}
 .news__subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -282,18 +324,31 @@ img {
   line-height: 1.25;
   color: var(--basic-extra-black);
 }
-.news__container {
+.news__image {
+  max-width: 560px;
+  max-height: 220px;
   background-color: #fff;
-  background-image: url(../img/news-strawberry.jpg);
-  background-size: 560px 220px;
-  background-repeat: no-repeat;
+  border-radius: 16px;
 }
-.subscribe__container {
+.news__image img {
+  border-radius: 16px;
+}
+.subscribe__image {
+  max-width: 560px;
+  max-height: 220px;
   background-color: #fff;
-  background-size: 560px 220px;
+  border-radius: 16px;
 }
-
-/* ----- Subscribe ----- */
+.subscribe__image img {
+  display: block;
+  border-radius: 16px;
+}
+.subscribe__content {
+  max-width: 548px;
+  max-height: 210px;
+  background-color: var(--basic-milk);
+  border-radius: 16px;
+}
 .subscribe__text {
   font-weight: 400;
   font-size: 16px;
@@ -306,6 +361,15 @@ img {
   line-height: 1.33;
   width: 130px;
   height: 44px;
+}
+
+.main__column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+.main__column img {
+  display: block;
 }
 
 /* ----- Contacts ----- */
@@ -346,8 +410,14 @@ img {
 .contacts__image {
   background-color: #e4dcc2;
 }
+.contacts__image img {
+  display: block;
+}
 
 /* ----- Footer ----- */
+.main-footer ul {
+  padding: 0;
+}
 .main-footer__socials-item {
   list-style: none;
 }
@@ -378,6 +448,16 @@ img {
 a.main-footer__copyrights-link {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+.main-footer__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.main-footer__info {
+  justify-self: center;
+}
+.main-footer__copyrights {
+  justify-self: end;
 }
 
 /* ----- Breadcrumbs ----- */
@@ -442,14 +522,23 @@ a.main-footer__copyrights-link {
 }
 .products__image img {
   border-radius: 50%;
+  display: block;
 }
 .products__button--paginator {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.12;
   color: var(--basic-white);
+<<<<<<< Updated upstream
   background-color: transparent;
   border: 0;
+=======
+  list-style: none;
+}
+.products__button-link {
+  color: var(--basic-white);
+  text-decoration: none;
+>>>>>>> Stashed changes
 }
 .products__button--active {
   border-radius: 50%;
@@ -457,6 +546,11 @@ a.main-footer__copyrights-link {
   min-height: 26px;
   background-color: var(--basic-white);
   color: var(--basic-extra-black);
+}
+.products__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 26px;
 }
 
 /* ----- Footer ----- */
