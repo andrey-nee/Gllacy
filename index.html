@@ -13,7 +13,7 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-  <body class="page-body page-body--green">
+  <body class="page-body page-body--green page-body--slider-1">
     <div class="wrapper">
 
       <header class="main-header">
@@ -48,16 +48,13 @@
               <div class="main-header__user-navigation user-navigation">
                 <ul class="user-navigation__list">
                   <li class="user-navigation__item user-navigation__item--search">
-                    <img src="img/icon/header-search.svg" width="16px" height="16px" alt="Иконка поиска" class="user-navigation__image">
-                    <div class="user-navigation__text"></div>
+                    <a href="blank.html" class="user-navigation__link user-navigation__link--search"></a>
                   </li>
                   <li class="user-navigation__item user-navigation__item--authorization">
-                    <img src="img/icon/header-authorization.svg" width="20px" height="19px" alt="Иконка поиска" class="user-navigation__image">
-                    <div class="user-navigation__text">Вход</div>
+                    <a href="blank.html" class="user-navigation__link user-navigation__link--authorization">Вход</a>
                   </li>
                   <li class="user-navigation__item user-navigation__item--cart">
-                    <img src="img/icon/header-cart.svg" width="21px" height="20px" alt="Иконка поиска" class="user-navigation__image">
-                    <div class="user-navigation__text">Пусто</div>
+                    <a href="blank.html" class="user-navigation__link user-navigation__link--cart">Пусто</a>
                   </li>
                 </ul>
               </div>
@@ -77,35 +74,24 @@
         <section class="promo">
           <div class="promo__container">
             <h1 class="promo__title visually-hidden">Главная страница</h1>
-            <div class="promo__slider">
-              <div class="promo__slide promo__slide--active">
-                <div class="promo__image">
-                  <img src="img/slider/slider-1.png" width="1200px" height="966px" alt="Шарик мороженого со вкусом крем-брюле в вафельном рожке и шарик мороженого со вкусом пломбира с малиновым джемом в вафельном рожке">
-                </div>
-                <p class="promo__description">Крем-брюле и пломбир<br> с малиновым джемом</p>
-              </div>
-              <div class="promo__slide">
-                <div class="promo__image">
-                  <img src="img/slider/slider-2.png"width="1200px" height="966px"  alt="Шарик мороженого со вкусом коколадного пломбира в вафельном рожке и шарик мороженого со вкусом лимонного сорбета в вафельном рожке">
-                </div>
-                <p class="promo__description">Шоколадный пломбир<br> и лимонный сорбет</p>
-              </div>
-              <div class="promo__slide">
-                <div class="promo__image">
-                  <img src="img/slider/slider-3.png"width="1200px" height="966px"  alt="Шарик мороженого со вкусом пломбира с помадкой в вафельном рожке и шарик мороженого со вкусом клубничного щербета в вафельном рожке">
-                </div>
-                <p class="promo__description">Пломбир с помадкой<br> и клубничный щербет</p>
-              </div>
-            </div>
-            <div class="promo__action">
-              <div class="promo__paginator">
-                <button type="button" class="promo__button--paginator promo__button--active"></button>
-                <button type="button" class="promo__button--paginator"></button>
-                <button type="button" class="promo__button--paginator"></button>
-              </div>
-              <button type="button" class="promo__button--order button">
-                <div class="promo__button-text button__text">Давайте оба!</div>
-              </button>
+            <ul class="promo-slider">
+              <li class="promo-slide promo__slide--active">
+                <h3 class="promo-slide-title">Крем-брюле и пломбир<br> с малиновым джемом</h3>
+                <a href="" class="promo__button--order button">Давайте оба!</a>
+              </li>
+              <li class="promo-slide promo__slide--active visually-hidden">
+                <h3 class="promo-slide-title">Шоколадный пломбир<br> и лимонный сорбет</h3>
+                <a href="" class="promo__button--order button">Давайте оба!</a>
+              </li>
+              <li class="promo-slide promo__slide--active visually-hidden">
+                <h3 class="promo-slide-title">Пломбир с помадкой<br> и клубничный щербет</h3>
+                <a href="" class="promo__button--order button">Давайте оба!</a>
+              </li>
+            </ul>
+            <div class="promo__paginator">
+              <button type="button" class="promo__button--paginator promo__button--active" aria-label="Первый слайд"></button>
+              <button type="button" class="promo__button--paginator" aria-label="Второй слайд"></button>
+              <button type="button" class="promo__button--paginator" aria-label="Третий слайд"></button>
             </div>
           </div>
         </section>
@@ -330,7 +316,7 @@
           </ul>
           <ul class="main-footer__info">
             <li class="main-footer__info-item">
-              <a href="blank.html" class="main-footer__link main-footer__link--bold">Для поставщиков</a>
+              <a href="blank.html" class="main-footer__link main-footer__link--bold main-footer__link--heart">Для поставщиков</a>
             </li>
             <li class="main-footer__info-item">
               <a href="blank.html" class="main-footer__link">Наши документы</a>
