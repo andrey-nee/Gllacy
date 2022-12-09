@@ -104,7 +104,6 @@
                     <option value="fat-content">по жирности</option>
                   </select>
                 </fieldset>
-
                 <fieldset class="filter__price range">
                   <legend class="visually-hidden">Цена:</legend>
                   <div class="range__filter">
@@ -125,7 +124,6 @@
                     </div>
                   </div>
                 </fieldset>
-
                 <fieldset class="filter__fat-content">
                   <legend>Жирность:</legend>
                   <ul class="filter__list fat-content">
@@ -133,21 +131,45 @@
                       <input class="visually-hidden filter-input-radio filter-input" type="radio" name="fat-content" value="0" id="filter-fat-0">
                       <label for="filter-fat-0">0%</label>
                     </li>
-                    <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="0-10" checked>до 10%</li>
-                    <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="0-30">до 30%</li>
-                    <li class="filter__item fat-content__item"><input type="radio" name="fat-content" value="30-100">выше 30%</li>
+                    <li class="filter__item fat-content__item">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="fat-content" value="0-10" id="filter-fat-below-10" checked>
+                      <label for="filter-fat-below-10">до 10%</label>
+                    </li>
+                    <li class="filter__item fat-content__item">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="fat-content" value="0-30" id="filter-fat-below-30">
+                      <label for="filter-fat-below-30">до 30%</label>
+                    </li>
+                    <li class="filter__item fat-content__item">
+                      <input class="visually-hidden filter-input-radio filter-input" type="radio" name="fat-content" value="30-100" id="filter-fat-above-30">
+                      <label for="filter-fat-above-30">выше 30%</label>
+                    </li>
                   </ul>
                 </fieldset>
               </div>
               <div class="filter__wrapper">
-                <fieldset class="filter__list fillers">
+                <fieldset class="filter__fillers">
                   <legend>Наполнители:</legend>
                   <ul class="filter__list fillers">
-                    <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="chocolate" checked>шоколадные</li>
-                    <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="sugar-powder" checked>сахарные присыпки</li>
-                    <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="fruit">фрукты</li>
-                    <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="syrup">сиропы</li>
-                    <li class="filter__item fillers__item"><input type="checkbox" name="fillers" value="jam">джемы</li>
+                    <li class="filter__item fillers__item">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="fillers" value="chocolate" id="filter-fillers-chocolate" checked>
+                      <label for="filter-fillers-chocolate">шоколадные</label>
+                    </li>
+                    <li class="filter__item fillers__item">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="fillers" value="sugar-powder" id="filter-fillers-sugar-powder" checked>
+                      <label for="filter-fillers-sugar-powder">сахарные присыпки</label>
+                    </li>
+                    <li class="filter__item fillers__item">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="fillers" value="fruit" id="filter-fillers-fruit">
+                      <label for="filter-fillers-fruit">фрукты</label>
+                    </li>
+                    <li class="filter__item fillers__item">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="fillers" value="syrup" id="filter-fillers-syrup">
+                      <label for="filter-fillers-syrup">сиропы</label>
+                    </li>
+                    <li class="filter__item fillers__item">
+                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="fillers" value="jam" id="filter-fillers-jam">
+                      <label for="filter-fillers-jam">джемы</label>
+                    </li>
                   </ul>
                 </fieldset>
                 <input type="submit" value="Применить" class="filter__button">
@@ -165,84 +187,96 @@
                   <img src="img/catalog/catalog-01.jpg" width="267px" height="267px" alt="Апельсиновое мороженое">
                   <div class="products__price"><span>310 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                <a class="products__description" href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                <!-- <p class="products__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-02.jpg" width="267px" height="267px" alt="Шоколадное мороженое">
                   <div class="products__price"><span>380 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочно-кофейное с кусочками шоколада</p>
+                <a class="products__description" href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
+                <!-- <p class="products__description">Сливочно-кофейное с кусочками шоколада</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-03.jpg" width="267px" height="267px" alt="Клубничное мороженое">
                   <div class="products__price"><span>355 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+                <a class="products__description" href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <!-- <p class="products__description">Сливочно-клубничное с присыпкой из белого шоколада</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-04.jpg" width="267px" height="267px" alt="Сливочное мороженое">
                   <div class="products__price"><span>415 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочное крем-брюле с карамельной подливкой</p>
+                <a class="products__description" href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
+                <!-- <p class="products__description">Сливочное крем-брюле с карамельной подливкой</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-05.jpg" width="267px" height="267px" alt="Апельсиновое мороженое">
                   <div class="products__price"><span>325 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочное с брусничным джемом</p>
+                <a class="products__description" href="blank.html">Сливочное с брусничным джемом</a>
+                <!-- <p class="products__description">Сливочное с брусничным джемом</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-06.jpg" width="267px" height="267px" alt="Шоколадное мороженое">
                   <div class="products__price"><span>410 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочно-черничное с цельными ягодами черники</p>
+                <a class="products__description" href="blank.html">Сливочно-черничное с цельными ягодами черники</a>
+                <!-- <p class="products__description">Сливочно-черничное с цельными ягодами черники</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-07.jpg" width="267px" height="267px" alt="Клубничное мороженое">
                   <div class="products__price"><span>315 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочно-лимонное с карамельной присыпкой</p>
+                <a class="products__description" href="blank.html">Сливочно-лимонное с карамельной присыпкой</a>
+                <!-- <p class="products__description">Сливочно-лимонное с карамельной присыпкой</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-08.jpg" width="267px" height="267px" alt="Сливочное мороженое">
                   <div class="products__price"><span>320 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочное с шоколадной стружкой</p>
+                <a class="products__description" href="blank.html">Сливочное с шоколадной стружкой</a>
+                <!-- <p class="products__description">Сливочное с шоколадной стружкой</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-09.jpg" width="267px" height="267px" alt="Апельсиновое мороженое">
                   <div class="products__price"><span>440 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочно-ванильное с кусочками шоколада</p>
+                <a class="products__description" href="blank.html">Сливочно-ванильное с кусочками шоколада</a>
+                <!-- <p class="products__description">Сливочно-ванильное с кусочками шоколада</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-10.jpg" width="267px" height="267px" alt="Шоколадное мороженое">
                   <div class="products__price"><span>435 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочноe с ментоловым сиропом</p>
+                <a class="products__description" href="blank.html">Сливочноe с ментоловым сиропом</a>
+                <!-- <p class="products__description">Сливочноe с ментоловым сиропом</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-11.jpg" width="267px" height="267px" alt="Клубничное мороженое">
                   <div class="products__price"><span>355 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочное с кусочками черного шоколада</p>
+                <a class="products__description" href="blank.html">Сливочное с кусочками черного шоколада</a>
+                <!-- <p class="products__description">Сливочное с кусочками черного шоколада</p> -->
               </article>
               <article class="products__item">
                 <div class="products__image">
                   <img src="img/catalog/catalog-12.jpg" width="267px" height="267px" alt="Сливочное мороженое">
                   <div class="products__price"><span>420 ₽</span>/кг</div>
                 </div>
-                <p class="products__description">Сливочное с мятным сиропом</p>
+                <a class="products__description" href="blank.html">Сливочное с мятным сиропом</a>
+                <!-- <p class="products__description">Сливочное с мятным сиропом</p> -->
               </article>
             </div>
             <ul class="products__paginator">
