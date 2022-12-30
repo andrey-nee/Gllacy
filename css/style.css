@@ -456,6 +456,15 @@ img {
   width: 267px;
   height: 267px;
 }
+.hit__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background-image: url(../img/icon/icon-hit.png);
+}
 .hit__price span {
   font-weight: 700;
   font-size: 45px;
@@ -477,6 +486,7 @@ img {
   text-decoration-color: rgba(255, 255, 255, 0.2);
   display: block;
   margin: 17px 0 0 0;
+  text-align: center;
 }
 .hit__image img {
   border-radius: 50%;
@@ -509,7 +519,7 @@ img {
 .about__container {
   max-width: 1146px;
   background-color: #e4dcc2;
-  background-image: url(../img/benefits-pattern.png);
+  background-image: url("../img/benefits-pattern.png");
   background-repeat:repeat;
   border-radius: 16px;
   padding: 24px 20px;
@@ -734,7 +744,7 @@ img {
   left: -22px;
   width: 15px;
   height: 13px;
-  background-image: url("../img/icon/footer-heart.svg");
+  background-image: url('../img/icon/footer-heart.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -776,15 +786,25 @@ a.main-footer__copyrights-link {
 .breadcrumbs__item {
   list-style: none;
   z-index: 50;
+  position: relative;
 }
 .breadcrumbs__item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 22px;
 }
 .breadcrumbs__link {
   line-height: 1.14;
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+.breadcrumbs__item:not(:first-child):before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -13px;
+  width: 6px;
+  height: 6px;
+  background-image: url('../img/icon/breadcrumbs-arrows.svg');
 }
 .breadcrumbs__link--disabled {
   text-decoration: none;
@@ -830,6 +850,16 @@ a.main-footer__copyrights-link {
 }
 .filter legend {
   margin-bottom: 11px;
+}
+.filter-select {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.12;
+  color: var(--basic-white);
+  border: none;
+  background-color: var(--range-controls);
+  padding: 10px 51px 10px 16px;
+  border-radius: 20px;
 }
 .filter__item {
   padding-left: 35px;
@@ -1000,6 +1030,7 @@ a.main-footer__copyrights-link {
   text-decoration-color: rgba(255, 255, 255, 0.2);
   display: block;
   margin: 17px 0 0 0;
+  text-align: center;
 }
 .products__image img {
   border-radius: 50%;
@@ -1042,4 +1073,4 @@ a.main-footer__copyrights-link {
   text-decoration: none;
 }
 
-/* ----- Footer ----- */
+/* ----- Modal ----- */
