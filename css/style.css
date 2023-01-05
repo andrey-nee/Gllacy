@@ -830,7 +830,7 @@ a.main-footer__copyrights-link {
 }
 .filter__form fieldset {
   border: 0;
-  margin: 0 16px 0 0;
+  margin: 0;
   padding: 0;
 }
 .filter__form legend {
@@ -838,6 +838,9 @@ a.main-footer__copyrights-link {
 }
 .filter__wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 870px;
 }
 .filter__wrapper:not(:last-child) {
   margin: 0 0 14px;
@@ -848,6 +851,13 @@ a.main-footer__copyrights-link {
   padding: 0;
   list-style: none;
 }
+.fillers {
+  background-color: var(--range-controls);
+}
+.fillers {
+  padding: 10px 16px;
+  border-radius: 20px;
+}
 .filter legend {
   margin-bottom: 11px;
 }
@@ -856,9 +866,10 @@ a.main-footer__copyrights-link {
   font-size: 16px;
   line-height: 1.12;
   color: var(--basic-white);
+  width: 196px;
   border: none;
   background-color: var(--range-controls);
-  padding: 10px 51px 10px 16px;
+  padding: 7px 25px 7px 16px;
   border-radius: 20px;
 }
 .filter__item {
@@ -873,6 +884,14 @@ a.main-footer__copyrights-link {
   cursor: pointer;
   user-select: none;
 }
+.fat-content {
+  background-color: var(--range-controls);
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+.fat-content__item {
+  white-space: nowrap;
+}
 .filter-input-radio:hover + label,
 .filter-input-radio:focus + label,
 .filter-input-checkbox:hover + label,
@@ -883,7 +902,7 @@ a.main-footer__copyrights-link {
   content: "";
   position: absolute;
   left: -34px;
-  top: 0;
+  top: -3px;
   width: 22px;
   height: 22px;
   background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3.52C12.4794 3.52 13.9256 3.95869 15.1557 4.78061C16.3857 5.60252 17.3445 6.77073 17.9106 8.13753C18.4768 9.50432 18.6249 11.0083 18.3363 12.4593C18.0477 13.9103 17.3353 15.2431 16.2892 16.2892C15.2431 17.3353 13.9103 18.0477 12.4593 18.3363C11.0083 18.6249 9.50432 18.4768 8.13753 17.9106C6.77074 17.3445 5.60252 16.3857 4.78061 15.1557C3.9587 13.9256 3.52 12.4794 3.52 11C3.52233 9.01689 4.31115 7.11568 5.71342 5.71341C7.11568 4.31115 9.0169 3.52233 11 3.52ZM11 0C8.82441 0 6.69767 0.645139 4.88873 1.85383C3.07979 3.06253 1.66989 4.78049 0.83733 6.79048C0.00476611 8.80047 -0.213071 11.0122 0.211367 13.146C0.635804 15.2798 1.68345 17.2398 3.22183 18.7782C4.76021 20.3165 6.72022 21.3642 8.85401 21.7886C10.9878 22.2131 13.1995 21.9952 15.2095 21.1627C17.2195 20.3301 18.9375 18.9202 20.1462 17.1113C21.3549 15.3023 22 13.1756 22 11C22 8.08262 20.8411 5.28472 18.7782 3.22182C16.7153 1.15893 13.9174 0 11 0V0Z" fill="white" fill-opacity="0.8"/></svg>');
@@ -901,7 +920,7 @@ a.main-footer__copyrights-link {
   content: "";
   position: absolute;
   left: -34px;
-  top: 0;
+  top: -2px;
   width: 20px;
   height: 20px;
   background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z" fill="white" fill-opacity="0.8"/></svg>');
@@ -922,8 +941,9 @@ a.main-footer__copyrights-link {
   color: inherit;
   width: 144px;
   height: 36px;
-}
-.filter__button {
+  /* position: absolute; */
+  top: 29px;
+  /* left: 675px; */
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
@@ -954,8 +974,8 @@ a.main-footer__copyrights-link {
 }
 .range__controls {
   position: relative;
-  height: 38px;
-  margin-top: 7px;
+  height: 36px;
+  margin-top: 9px;
   padding-top: 18px;
   padding-right: 21px;
   padding-left: 21px;
