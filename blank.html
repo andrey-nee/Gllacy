@@ -34,8 +34,25 @@
             <nav class="main-header__navigation">
               <div class="main-header__site-navigation site-navigation">
                 <ul class="site-navigation__list">
-                  <li class="site-navigation__item">
-                    <a href="catalog.html" class="site-navigation__link">Каталог</a>
+                  <li class="site-navigation__item catalog-navigation site-navigation__item--disabled">
+                    <a href="catalog.html" class="site-navigation__link catalog-navigation__link">Каталог</a>
+                    <ul class="site-navigation__sub-list">
+                      <li class="site-navigation__sub-item">
+                        <a href="blank.html" class="site-navigation__sub-link">Новинки</a>
+                      </li>
+                      <li class="site-navigation__sub-item">
+                        <a href="catalog.html" class="site-navigation__sub-link">Сливочное</a>
+                      </li>
+                      <li class="site-navigation__sub-item">
+                        <a href="blank.html" class="site-navigation__sub-link">Щербеты</a>
+                      </li>
+                      <li class="site-navigation__sub-item">
+                        <a href="blank.html" class="site-navigation__sub-link">Фруктовый лед</a>
+                      </li>
+                      <li class="site-navigation__sub-item">
+                        <a href="blank.html" class="site-navigation__sub-link">Мелорин</a>
+                      </li>
+                    </ul>
                   </li>
                   <li class="site-navigation__item">
                     <a href="blank.html" class="site-navigation__link">Доставка и оплата</a>
@@ -47,14 +64,20 @@
               </div>
               <div class="main-header__user-navigation user-navigation">
                 <ul class="user-navigation__list">
-                  <li class="user-navigation__item user-navigation__item--search">
-                    <a href="blank.html" class="user-navigation__link user-navigation__link--search"></a>
+                  <li class="user-navigation__item">
+                    <div class="user-navigation__item-container  user-navigation__item-container--search">
+                      <a href="blank.html" class="user-navigation__link user-navigation__link--search"></a>
+                    </div>
                   </li>
-                  <li class="user-navigation__item user-navigation__item--authorization">
-                    <a href="blank.html" class="user-navigation__link user-navigation__link--authorization">Вход</a>
+                  <li class="user-navigation__item">
+                    <div class="user-navigation__item-container user-navigation__item-container--authorization">
+                      <a href="blank.html" class="user-navigation__link user-navigation__link--authorization">Вход</a>
+                    </div>
                   </li>
-                  <li class="user-navigation__item user-navigation__item--cart">
-                    <a href="blank.html" class="user-navigation__link user-navigation__link--cart">Пусто</a>
+                  <li class="user-navigation__item">
+                    <div class="user-navigation__item-container user-navigation__item-container--cart">
+                      <a href="blank.html" class="user-navigation__link user-navigation__link--cart">Пусто</a>
+                    </div>
                   </li>
                 </ul>
               </div>
