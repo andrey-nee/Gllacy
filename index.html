@@ -65,17 +65,17 @@
               <div class="main-header__user-navigation user-navigation">
                 <ul class="user-navigation__list">
                   <li class="user-navigation__item">
-                    <div class="user-navigation__item-container  user-navigation__item-container--search">
+                    <div class="user-navigation__item-container  user-navigation__item-container--search" id="button-search">
                       <a href="blank.html" class="user-navigation__link user-navigation__link--search"></a>
                     </div>
                   </li>
                   <li class="user-navigation__item">
-                    <div class="user-navigation__item-container user-navigation__item-container--authorization">
+                    <div class="user-navigation__item-container user-navigation__item-container--authorization" id="button-authorization">
                       <a href="blank.html" class="user-navigation__link user-navigation__link--authorization">Вход</a>
                     </div>
                   </li>
                   <li class="user-navigation__item">
-                    <div class="user-navigation__item-container user-navigation__item-container--cart">
+                    <div class="user-navigation__item-container user-navigation__item-container--cart" id="button-cart">
                       <a href="blank.html" class="user-navigation__link user-navigation__link--cart">Пусто</a>
                     </div>
                   </li>
@@ -377,15 +377,54 @@
         </div>
       </footer>
 
-      <div class="form-search" id="form-search">
+      <div class="popup-search" id="form-search">
         <h3 class="form-search__title visually-hidden">Поиск</h3>
         <form method="get" action="#" class="search__form">
           <input type="text" name="search" placeholder="Крем-брюле">
         </form>
       </div>
-      <div class="form-authorization"></div>
-      <div class="form-cart"></div>
-      <div class="form-subscribe"></div>
+
+      <div class="popup-authorization" id="form-authorization">
+        <h3 class="form-authorization__title visually-hidden">Авторизация</h3>
+        <form method="post" action="#" class="authorization__form">
+          <input type="email" name="email" placeholder="email@example.com">
+          <input type="password" name="password" placeholder="......">
+          <div class="authorization__actions-container">
+            <input type="submit" name="authorization-submit" value="Войти" class="button">
+            <div class="authorization__link-container">
+              <a href="blank.html" class="authorization__link--password-recovery">Забыли пароль?</a>
+              <a href="blank.html" class="authorization__link--registration">Новая регистрация</a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="popup-cart" id="form-cart">
+        <h3 class="form-cart__title visually-hidden">Корзина</h3>
+        <form method="post" action="#" class="cart__form">
+
+          <div class="popup-cart__item">
+            <div class="popup-cart__item-remove"></div>
+            <div class="popup-cart__item-info">
+              <div class="popup-cart__item-image">
+                <img src="img/catalog/catalog-01.jpg" alt="" width="33px" height="33px">
+              </div>
+              <div class="popup-cart__item-name popup-cart__item-text">Пломбир с апельсиновым джемом</div>
+            </div>
+            <div class="popup-cart__item-check">
+              <div class="popup-cart__item-weight popup-cart__item-text">1,5 кг х</div>
+              <div class="popup-cart__item-price popup-cart__item-text">200 руб.</div>
+            </div>
+            <div class="popup-cart__item-price-total popup-cart__item-text">300 руб.</div>
+          </div>
+
+          <div class="popup-cart__cart-price-total">Итого: 750 руб.</div>
+          <input type="submit" name="cart-submit" value="Оформить заказ" class="button">
+
+        </form>
+        <div class="popup-subscribe"></div>
+      </div>
+
     </div>
 
     <script src="js/script.js"></script>
